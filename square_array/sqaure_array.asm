@@ -1,0 +1,52 @@
+main:
+        addi    sp,sp,-48
+        sw      ra,44(sp)
+        sw      s0,40(sp)
+        addi    s0,sp,48
+        li      a5,2
+        sw      a5,-32(s0)
+        li      a5,4
+        sw      a5,-28(s0)
+        li      a5,6
+        sw      a5,-24(s0)
+        sw      zero,-20(s0)
+.L3:
+        lw      a4,-20(s0)
+        li      a5,2
+        bgt     a4,a5,.L2
+        lw      a5,-20(s0)
+        slli    a5,a5,2
+        addi    a4,s0,-16
+        add     a5,a4,a5
+        lw      a5,-16(a5)
+        mv      a0,a5
+        jal     square_int
+        mv      a4,a0
+        lw      a5,-20(s0)
+        slli    a5,a5,2
+        addi    a3,s0,-16
+        add     a5,a3,a5
+        sw      a4,-24(a5)
+        lw      a5,-20(s0)
+        addi    a5,a5,1
+        sw      a5,-20(s0)
+        j       .L3
+.L2:
+        li      a5,0
+        mv      a0,a5
+        lw      ra,44(sp)
+        lw      s0,40(sp)
+        addi    sp,sp,48
+        jr      ra
+square_int:
+        addi    sp,sp,-32
+        sw      s0,28(sp)
+        addi    s0,sp,32
+        sw      a0,-20(s0)
+        lw      a4,-20(s0)
+        lw      a5,-20(s0)
+        mul     a5,a4,a5
+        mv      a0,a5
+        lw      s0,28(sp)
+        addi    sp,sp,32
+        jr      ra
