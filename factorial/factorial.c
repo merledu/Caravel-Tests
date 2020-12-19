@@ -1,13 +1,9 @@
- int fact(int n);
-int main() 
+int main()
 {
-    int n = 7;
-    fact(n);
-}
- int fact(int n)
-{   int fact = 1;
-        for(int i = 1; i <= n; ++i)
- {
-            fact *= i;
- }
+    int i;
+    int fact=1;
+    for(i = 1; i<=3; i++)
+    {
+        fact = fact*i;
+    }
 }
