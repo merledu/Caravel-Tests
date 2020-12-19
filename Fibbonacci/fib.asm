@@ -21,7 +21,7 @@ loop:
 beq x10,x11,end
 add x14,x13,x12
 sw x14,0x1c(s0)
-sw x14,0x10(s0)
+sw x14,0x10(s0) // writing on GPIOs
 mv x12,x13
 mv x13,x14
 addi x10,x10,1
