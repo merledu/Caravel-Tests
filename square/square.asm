@@ -1,29 +1,16 @@
-main:
-        addi    sp,sp,-32
-        sw      ra,28(sp)
-        sw      s0,24(sp)
-        addi    s0,sp,32
-        li      a5,5
-        sw      a5,-20(s0)
-        lw      a0,-20(s0)
-        jal     ra,square
-        li      a5,0
-        mv      a0,a5
-        lw      ra,28(sp)
-        lw      s0,24(sp)
-        addi    sp,sp,32
-        j       end
+li x20, 0x40010000		# gpio base address
+li x21, 0x10000000		# dccm base address
+addi x15, x0, 4			# any number that needs to be squared
+sw x15, 0(x21)
+jal square
+lw x17, 4(x21)
+addi x18, x0, 0x000000FF
+sw x18, 0x1c(x20)
+sw x17, 0x10(x20)
+jal end
 square:
-        addi    sp,sp,-32
-        sw      s0,28(sp)
-        addi    s0,sp,32
-        sw      a0,-20(s0)
-        lw      a4,-20(s0)
-        lw      a5,-20(s0)
-        mul     a5,a4,a5
-        mv      a0,a5
-        lw      s0,28(sp)
-        addi    sp,sp,32
-        jr      ra
+	lw x16, 0(x21)
+    mul x16, x16, x16
+    sw x16, 4(x21)
+    ret
 end:
-
