@@ -1,5 +1,5 @@
 li x8, 0x40010000 # gpio base address
-li x7, 0xff
+li x7, 0xfff
 sw x7, 0x1c(x8)
 li x5, 50
 li x6, 62
