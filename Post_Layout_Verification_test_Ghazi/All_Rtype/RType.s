@@ -1,3 +1,36 @@
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+
 li x9, 0x40010000 # gpio address
 
 li x5, 0xff
@@ -34,3 +67,4 @@ li x5, 14
 li x6, 63
 and x7, x5, x6   # E
 sw x7, 0x10(x9) 
+

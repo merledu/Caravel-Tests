@@ -1,3 +1,35 @@
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
 li x20, 0x40010000		# gpio base address
 li x21, 0x10000000		# dccm base address for ibtida # for ghazi change it to 0x18000000
 addi x15, x0, 4			# any number that needs to be squared
@@ -14,3 +46,8 @@ square:
     sw x16, 4(x21)
     ret
 end:
+
+
+
+
+

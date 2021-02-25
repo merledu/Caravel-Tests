@@ -1,3 +1,35 @@
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
 li s0, 0x40010000
 li x10, 0xff
 li x11,1
@@ -11,3 +43,5 @@ jal loop
 end:
 sw x10,0x1c(s0)
 sw x11, 0x10(s0) 
+
+

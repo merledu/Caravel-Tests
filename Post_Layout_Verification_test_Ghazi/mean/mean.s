@@ -1,3 +1,35 @@
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
 li x15, 0x40010000 	# gpio base address
 li x14, 0x10000000 	# dccm base address for ibtida  # for ghazi change it to 0x18000000
 addi x16, x0, 4		# first number
@@ -23,4 +55,7 @@ average:
     sw x23, 0xc(x14)	#saving the average
     ret
 end:
+
+
+
 

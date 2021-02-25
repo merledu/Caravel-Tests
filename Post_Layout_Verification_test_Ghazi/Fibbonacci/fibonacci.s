@@ -1,3 +1,35 @@
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
 li s0, 0x40010000  # gpio base address
 li x10,1 # i
 li x11,6 # n
@@ -15,3 +47,6 @@ mv x13,x14
 addi x10,x10,1
 jal loop
 end:
+
+
+

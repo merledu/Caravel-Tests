@@ -1,3 +1,35 @@
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
 li x8, 0x40010000 # gpio address
 li x9, 0x18000000 # DCCM address for ghazi # for Ibtida change it to 0x10000000
 li x7, 0xff
@@ -20,3 +52,4 @@ loop1:
 sw x7, 0x10(x8)
 li x7, 0
 sw x7, 0x10(x8)
+
