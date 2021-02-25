@@ -35,3 +35,6 @@ end:
 bnez x7, B4
 li x7, 77
 sw x7, 0x10(x8)  # 4D 
+
+exit:
+jal exit
