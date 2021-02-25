@@ -15,3 +15,4 @@ mv x13,x14
 addi x10,x10,1
 jal loop
 end:
+jal end
